@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>1-Minuten-Blog</title>
-    <link>https://dastrasmue.github.io/demo/index.xml</link>
-    <description>Recent content on 1-Minuten-Blog</description>
+    <title>Post-rsses on 1-Minuten-Blog</title>
+    <link>https://dastrasmue.github.io/demo/post/index.xml</link>
+    <description>Recent content in Post-rsses on 1-Minuten-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
     <lastBuildDate>Tue, 13 Dec 2016 13:12:15 +0100</lastBuildDate>
-    <atom:link href="https://dastrasmue.github.io/demo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dastrasmue.github.io/demo/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>welcome</title>
