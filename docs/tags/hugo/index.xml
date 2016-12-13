@@ -9,15 +9,17 @@
     <atom:link href="https://dastrasmue.github.io/demo/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Willkommen</title>
-      <link>https://dastrasmue.github.io/demo/2016/12/willkommen/</link>
+      <title>1-Minuten-Blog mit Hugo</title>
+      <link>https://dastrasmue.github.io/demo/2016/12/1-minuten-blog-mit-hugo/</link>
       <pubDate>Tue, 13 Dec 2016 13:12:15 +0100</pubDate>
       
-      <guid>https://dastrasmue.github.io/demo/2016/12/willkommen/</guid>
+      <guid>https://dastrasmue.github.io/demo/2016/12/1-minuten-blog-mit-hugo/</guid>
       <description>&lt;h2 id=&#34;herzlich-willkommen-zum-1-minuten-blog-mit-hugo&#34;&gt;Herzlich Willkommen zum 1-Minuten-Blog mit Hugo!&lt;/h2&gt;
 
-&lt;p&gt;Ich werde im Rahmen des Web&amp;amp;Wine-Lightning-Talks vorstellen, wie man mit dem &lt;em&gt;statischen Seitengenerator&lt;/em&gt;
-&lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt; einen eigenen Blog erstellen kann. Die ersten Schritte können in einer Minute bewältigt werden.&lt;/p&gt;
+&lt;p&gt;Ich werde im Rahmen des &lt;a href=&#34;https://www.meetup.com/de-DE/web-and-wine/events/235929431/&#34;&gt;Web&amp;amp;Wine&lt;/a&gt;-Lightning-Talks
+vorstellen, wie man mit dem &lt;em&gt;statischen Seitengenerator&lt;/em&gt; &lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt;
+einen eigenen Blog erstellen kann. Die ersten Schritte können in einer Minute
+bewältigt werden.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
 
@@ -32,6 +34,10 @@
 &lt;/ol&gt;
 
 &lt;h3 id=&#34;erstellen-einer-seite&#34;&gt;Erstellen einer Seite&lt;/h3&gt;
+
+&lt;p&gt;Hugo kann über die &lt;a href=&#34;https://github.com/spf13/hugo/releases/&#34;&gt;offizielle GitHub-Seite&lt;/a&gt;
+bezogen werden und wiegt nur etwa 5MB. Nach der Installation kann eine neue Seite
+über folgenden Befehl erzeugt werden:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ hugo new minuteblog
 ...
@@ -48,7 +54,8 @@ $ tree minuteblog
 
 &lt;h3 id=&#34;erstellen-von-posts&#34;&gt;Erstellen von Posts&lt;/h3&gt;
 
-&lt;p&gt;Posts werden zuerst mit Hugo generiert und können dann editiert werden. Posts enthalten bereits Meta-Informationen.
+&lt;p&gt;Posts werden zuerst mit Hugo generiert und können dann editiert werden. Posts
+enthalten bereits Meta-Informationen.
 Für die Strukturierung des Textes wird &lt;em&gt;Markdown&lt;/em&gt; verwendet. Gute Ressourcen, um die Markdown-Syntax nachzuschlagen sind:&lt;/p&gt;
 
 &lt;ul&gt;
@@ -61,22 +68,26 @@ Für die Strukturierung des Textes wird &lt;em&gt;Markdown&lt;/em&gt; verwendet.
 &lt;pre&gt;&lt;code&gt;$ hugo new post/first.md
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Nach dem erstellen von Posts möchte man in der Regel eine Vorschau der Seite anschauen. Dazu kann Hugos eingebauter Webserver
-verwendet werden. Dieser wird gestartet über &lt;code&gt;hugo server -D&lt;/code&gt;. Der Parameter &lt;code&gt;-D&lt;/code&gt; bewirkt dabei, dass auch Posts gerendert
-werden, die noch als &lt;code&gt;draft&lt;/code&gt; markiert sind.&lt;/p&gt;
+&lt;p&gt;Nach dem erstellen von Posts möchte man in der Regel eine Vorschau der Seite
+anschauen. Dazu kann Hugos eingebauter Webserver verwendet werden. Dieser wird
+gestartet über &lt;code&gt;hugo server -D&lt;/code&gt;. Der Parameter &lt;code&gt;-D&lt;/code&gt; bewirkt dabei, dass auch
+Posts gerendert werden, die noch als &lt;code&gt;draft&lt;/code&gt; markiert sind.&lt;/p&gt;
 
 &lt;p&gt;Allerdings bemerkt man, dass der Seite noch ein Thema fehlt.&lt;/p&gt;
 
 &lt;h3 id=&#34;verwendung-von-themen&#34;&gt;Verwendung von Themen&lt;/h3&gt;
 
-&lt;p&gt;Es kann zwischen einer großen Anzahl von Themen für Hugo gewählt werden. Diese werden auf der &lt;a href=&#34;https://themes.gohugo.io&#34;&gt;offiziellen Seite&lt;/a&gt; präsentiert. Für diesen Blog verwenden wir &lt;a href=&#34;https://themes.gohugo.io/hugo-tranquilpeak-theme/&#34;&gt;hugo-tranquilpeak-theme&lt;/a&gt;. Eine Demo des Themas kann
+&lt;p&gt;Es kann zwischen einer großen Anzahl von Themen für Hugo gewählt werden. Diese
+werden auf der &lt;a href=&#34;https://themes.gohugo.io&#34;&gt;offiziellen Seite&lt;/a&gt; präsentiert. Für
+diesen Blog verwenden wir &lt;a href=&#34;https://themes.gohugo.io/hugo-tranquilpeak-theme/&#34;&gt;hugo-tranquilpeak-theme&lt;/a&gt;. Eine Demo des Themas kann
 hier betrachtet werden: &lt;a href=&#34;https://tranquilpeak.kakawait.com/&#34;&gt;https://tranquilpeak.kakawait.com/&lt;/a&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ cd themes
 $ git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Anschließend sollte die Konfigurationsdatei des Themas in das Projekt-Root-Verzeichnis kopiert und angepasst werden.&lt;/p&gt;
+&lt;p&gt;Anschließend sollte die Konfigurationsdatei des Themas in das
+Projekt-Root-Verzeichnis kopiert und angepasst werden.&lt;/p&gt;
 
 &lt;h3 id=&#34;hosting-des-blogs-auf-github-pages&#34;&gt;Hosting des Blogs auf GitHub Pages&lt;/h3&gt;
 
@@ -91,7 +102,7 @@ erreicht werden.&lt;/p&gt;
 
 &lt;p&gt;Gibt es in dem Repository jedoch einen Unterordner &lt;code&gt;docs&lt;/code&gt;, so kann dieser als
 Quellverzeichnis gewählt werden. Damit Hugo die Seite in &lt;code&gt;docs&lt;/code&gt; ablegt,
-bedarf es einen kleinen Tricks:&lt;/p&gt;
+bedarf es eines kleinen Tricks:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ mkdir docs
 $ ln -s docs public
@@ -104,17 +115,19 @@ die Seite über &lt;a href=&#34;https://username.github.io/repo&#34;&gt;https://
 
 &lt;h3 id=&#34;einbettung-von-kommentaren&#34;&gt;Einbettung von Kommentaren&lt;/h3&gt;
 
-&lt;p&gt;Viele Themen erlauben es, &lt;a href=&#34;https://disqus.com/&#34;&gt;Disqus&lt;/a&gt; zur Einbettung von Kommentaren einzubinden.
-Auch mit dem verwendeten Thema ist dies möglich. Nach der Registrierung bei
-Disqus, kann eine neue Seite angelegt werden. Diese wird eindeutig über die
-sog. &lt;em&gt;shortname&lt;/em&gt; identifiziert. Die ganze URL für diesen Blog lautet
-&lt;em&gt;minutenblog&lt;/em&gt;.disqus.com.&lt;/p&gt;
+&lt;p&gt;Viele Themen erlauben es, &lt;a href=&#34;https://disqus.com/&#34;&gt;Disqus&lt;/a&gt; zur Einbettung von
+Kommentaren einzubinden. Auch mit dem verwendeten Thema ist dies möglich. Nach
+der Registrierung bei Disqus, kann eine neue Seite angelegt werden. Diese wird
+eindeutig über den sog. &lt;em&gt;shortname&lt;/em&gt; identifiziert. Die ganze URL für diesen Blog
+lautet &lt;em&gt;minutenblog&lt;/em&gt;.disqus.com.&lt;/p&gt;
 
 &lt;p&gt;Damit Kommentare eingebettet werden können, muss nur folgender Eintrag in
 &lt;code&gt;config.toml&lt;/code&gt; gesetzt werden:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;disqusShortname = &amp;quot;minutenblog&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Herzlichen Dank für die Aufmerksamkeit!&lt;/p&gt;</description>
     </item>
     
   </channel>
