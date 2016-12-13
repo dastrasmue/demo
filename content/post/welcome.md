@@ -60,7 +60,8 @@ Allerdings bemerkt man, dass der Seite noch ein Thema fehlt.
 
 Es kann zwischen einer großen Anzahl von Themen für Hugo gewählt werden. Diese werden auf der [offiziellen Seite]
 (https://themes.gohugo.io) präsentiert. Für diesen Blog verwenden wir [hugo-tranquilpeak-theme]
-(https://themes.gohugo.io/hugo-tranquilpeak-theme/).
+(https://themes.gohugo.io/hugo-tranquilpeak-theme/). Eine Demo des Themas kann
+hier betrachtet werden: <https://tranquilpeak.kakawait.com/>
 
 ```
 $ cd themes
