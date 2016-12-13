@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1-Minuten-Blog</title>
-    <link>https://dastra.github.io/demo/index.xml</link>
+    <link>https://dastrasmue.github.io/demo/index.xml</link>
     <description>Recent content on 1-Minuten-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <atom:link href="https://dastra.github.io/demo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dastrasmue.github.io/demo/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
