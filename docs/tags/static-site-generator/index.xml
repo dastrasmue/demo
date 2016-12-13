@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>1-Minuten-Blog</title>
-    <link>https://dastrasmue.github.io/demo/tags/static-site-generator/index.xml</link>
+    <link>http://www.dastra.de/tags/static-site-generator/index.xml</link>
     <description>Recent content on 1-Minuten-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <atom:link href="https://dastrasmue.github.io/demo/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.dastra.de/tags/static-site-generator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>1-Minuten-Blog mit Hugo</title>
-      <link>https://dastrasmue.github.io/demo/2016/12/1-minuten-blog-mit-hugo/</link>
+      <link>http://www.dastra.de/2016/12/1-minuten-blog-mit-hugo/</link>
       <pubDate>Tue, 13 Dec 2016 13:12:15 +0100</pubDate>
       
-      <guid>https://dastrasmue.github.io/demo/2016/12/1-minuten-blog-mit-hugo/</guid>
+      <guid>http://www.dastra.de/2016/12/1-minuten-blog-mit-hugo/</guid>
       <description>&lt;h2 id=&#34;herzlich-willkommen-zum-1-minuten-blog-mit-hugo&#34;&gt;Herzlich Willkommen zum 1-Minuten-Blog mit Hugo!&lt;/h2&gt;
 
 &lt;p&gt;Ich werde im Rahmen des &lt;a href=&#34;https://www.meetup.com/de-DE/web-and-wine/events/235929431/&#34;&gt;Web&amp;amp;Wine&lt;/a&gt;-Lightning-Talks

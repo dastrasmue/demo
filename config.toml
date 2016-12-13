@@ -12,7 +12,7 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseurl = "https://dastrasmue.github.io/demo"
+baseurl = "http://www.dastra.de/"
 languageCode = "de-de"
 title = "1-Minuten-Blog"
 theme = "hugo-tranquilpeak-theme"
