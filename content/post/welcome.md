@@ -96,3 +96,16 @@ Danach geht man in dem Github-Repository auf *Settings > GitHub Pages* und wähl
 die Seite über <https://username.github.io/repo> erreichbar.
 
 ### Einbettung von Kommentaren
+
+Viele Themen erlauben es, [Disqus](https://disqus.com/) zur Einbettung von Kommentaren einzubinden.
+Auch mit dem verwendeten Thema ist dies möglich. Nach der Registrierung bei
+Disqus, kann eine neue Seite angelegt werden. Diese wird eindeutig über die
+sog. *shortname* identifiziert. Die ganze URL für diesen Blog lautet
+*minutenblog*.disqus.com.
+
+Damit Kommentare eingebettet werden können, muss nur folgender Eintrag in
+`config.toml` gesetzt werden:
+
+```
+disqusShortname = "minutenblog"
+```

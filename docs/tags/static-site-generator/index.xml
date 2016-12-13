@@ -102,7 +102,19 @@ $ hugo
 &lt;em&gt;master branch /docs folder&lt;/em&gt; als Quelle aus. Nach dem nächsten Push des Codes ist
 die Seite über &lt;a href=&#34;https://username.github.io/repo&#34;&gt;https://username.github.io/repo&lt;/a&gt; erreichbar.&lt;/p&gt;
 
-&lt;h3 id=&#34;einbettung-von-kommentaren&#34;&gt;Einbettung von Kommentaren&lt;/h3&gt;</description>
+&lt;h3 id=&#34;einbettung-von-kommentaren&#34;&gt;Einbettung von Kommentaren&lt;/h3&gt;
+
+&lt;p&gt;Viele Themen erlauben es, &lt;a href=&#34;https://disqus.com/&#34;&gt;Disqus&lt;/a&gt; zur Einbettung von Kommentaren einzubinden.
+Auch mit dem verwendeten Thema ist dies möglich. Nach der Registrierung bei
+Disqus, kann eine neue Seite angelegt werden. Diese wird eindeutig über die
+sog. &lt;em&gt;shortname&lt;/em&gt; identifiziert. Die ganze URL für diesen Blog lautet
+&lt;em&gt;minutenblog&lt;/em&gt;.disqus.com.&lt;/p&gt;
+
+&lt;p&gt;Damit Kommentare eingebettet werden können, muss nur folgender Eintrag in
+&lt;code&gt;config.toml&lt;/code&gt; gesetzt werden:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;disqusShortname = &amp;quot;minutenblog&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
   </channel>

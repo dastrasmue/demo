@@ -313,6 +313,18 @@ $ hugo
 die Seite über <a href="https://username.github.io/repo">https://username.github.io/repo</a> erreichbar.</p>
 
 <h3 id="einbettung-von-kommentaren">Einbettung von Kommentaren</h3>
+
+<p>Viele Themen erlauben es, <a href="https://disqus.com/">Disqus</a> zur Einbettung von Kommentaren einzubinden.
+Auch mit dem verwendeten Thema ist dies möglich. Nach der Registrierung bei
+Disqus, kann eine neue Seite angelegt werden. Diese wird eindeutig über die
+sog. <em>shortname</em> identifiziert. Die ganze URL für diesen Blog lautet
+<em>minutenblog</em>.disqus.com.</p>
+
+<p>Damit Kommentare eingebettet werden können, muss nur folgender Eintrag in
+<code>config.toml</code> gesetzt werden:</p>
+
+<pre><code>disqusShortname = &quot;minutenblog&quot;
+</code></pre>
               
             </div>
           </div>
