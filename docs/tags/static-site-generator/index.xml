@@ -27,7 +27,7 @@
 &lt;li&gt;Erstellen einer Seite&lt;/li&gt;
 &lt;li&gt;Erstellen von Posts&lt;/li&gt;
 &lt;li&gt;Verwendung von Themen&lt;/li&gt;
-&lt;li&gt;Hosting des Blogs auf Github Pages&lt;/li&gt;
+&lt;li&gt;Hosting des Blogs auf GitHub Pages&lt;/li&gt;
 &lt;li&gt;Einbettung von Kommentaren&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -78,13 +78,13 @@ $ git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git
 
 &lt;p&gt;Anschließend sollte die Konfigurationsdatei des Themas in das Projekt-Root-Verzeichnis kopiert und angepasst werden.&lt;/p&gt;
 
-&lt;h3 id=&#34;hosting-des-blogs-auf-github-pages&#34;&gt;Hosting des Blogs auf Github Pages&lt;/h3&gt;
+&lt;h3 id=&#34;hosting-des-blogs-auf-github-pages&#34;&gt;Hosting des Blogs auf GitHub Pages&lt;/h3&gt;
 
 &lt;p&gt;Mit Hugo muss vor dem Hosting die HTML-Version der Seite erzeugt werden. Dies
 geschieht über den Befehl &lt;code&gt;hugo&lt;/code&gt;. Dabei werden aus dem Thema und den Markdown-
 Dateien eine gültige Seitenstruktur erzeugt und unter &lt;code&gt;public&lt;/code&gt; abgelegt.&lt;/p&gt;
 
-&lt;p&gt;Mit dem Dienst &lt;a href=&#34;https://pages.github.com/&#34;&gt;Pages&lt;/a&gt; bietet Github die Möglichkeit,
+&lt;p&gt;Mit dem Dienst &lt;a href=&#34;https://pages.github.com/&#34;&gt;Pages&lt;/a&gt; bietet GitHub die Möglichkeit,
 statische Seiten direkt zu hosten. In der Regel wird ein ganzes Repository als
 Internetseite verstanden und kann über die URL &lt;code&gt;https://username.github.io/repo&lt;/code&gt;
 erreicht werden.&lt;/p&gt;
@@ -98,7 +98,7 @@ $ ln -s docs public
 $ hugo
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Danach geht man in dem Github-Repository auf &lt;em&gt;Settings &amp;gt; GitHub Pages&lt;/em&gt; und wählt
+&lt;p&gt;Danach geht man in dem GitHub-Repository auf &lt;em&gt;Settings &amp;gt; GitHub Pages&lt;/em&gt; und wählt
 &lt;em&gt;master branch /docs folder&lt;/em&gt; als Quelle aus. Nach dem nächsten Push des Codes ist
 die Seite über &lt;a href=&#34;https://username.github.io/repo&#34;&gt;https://username.github.io/repo&lt;/a&gt; erreichbar.&lt;/p&gt;
 

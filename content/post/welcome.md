@@ -17,7 +17,7 @@ Ich werde im Rahmen des Web&Wine-Lightning-Talks vorstellen, wie man mit dem *st
 1. Erstellen einer Seite
 1. Erstellen von Posts
 1. Verwendung von Themen
-1. Hosting des Blogs auf Github Pages
+1. Hosting des Blogs auf GitHub Pages
 1. Einbettung von Kommentaren
 
 ### Erstellen einer Seite
@@ -70,13 +70,13 @@ $ git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git
 
 Anschließend sollte die Konfigurationsdatei des Themas in das Projekt-Root-Verzeichnis kopiert und angepasst werden.
 
-### Hosting des Blogs auf Github Pages
+### Hosting des Blogs auf GitHub Pages
 
 Mit Hugo muss vor dem Hosting die HTML-Version der Seite erzeugt werden. Dies
 geschieht über den Befehl `hugo`. Dabei werden aus dem Thema und den Markdown-
 Dateien eine gültige Seitenstruktur erzeugt und unter `public` abgelegt.
 
-Mit dem Dienst [Pages](https://pages.github.com/) bietet Github die Möglichkeit,
+Mit dem Dienst [Pages](https://pages.github.com/) bietet GitHub die Möglichkeit,
 statische Seiten direkt zu hosten. In der Regel wird ein ganzes Repository als
 Internetseite verstanden und kann über die URL `https://username.github.io/repo`
 erreicht werden.
@@ -91,7 +91,7 @@ $ ln -s docs public
 $ hugo
 ```
 
-Danach geht man in dem Github-Repository auf *Settings > GitHub Pages* und wählt
+Danach geht man in dem GitHub-Repository auf *Settings > GitHub Pages* und wählt
 *master branch /docs folder* als Quelle aus. Nach dem nächsten Push des Codes ist
 die Seite über <https://username.github.io/repo> erreichbar.
 
@@ -109,3 +109,4 @@ Damit Kommentare eingebettet werden können, muss nur folgender Eintrag in
 ```
 disqusShortname = "minutenblog"
 ```
+
