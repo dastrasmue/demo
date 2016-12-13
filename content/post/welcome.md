@@ -1,7 +1,7 @@
 +++
 date = "2016-12-13T13:12:15+01:00"
 title = "welcome"
-draft = true
+draft = false
 
 +++
 
@@ -71,4 +71,4 @@ Anschließend sollte die Konfigurationsdatei des Themas in das Projekt-Root-Verz
 
 
 ### Hosting des Blogs auf Github Pages
-### Einbettung von Kommentaren
+### Einbettung von Kommentarenx
