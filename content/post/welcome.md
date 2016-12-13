@@ -1,8 +1,8 @@
 +++
 date = "2016-12-13T13:12:15+01:00"
+tags = ["Hugo", "static site generator"]
 title = "Willkommen"
 draft = false
-
 +++
 
 ## Herzlich Willkommen zum 1-Minuten-Blog mit Hugo!
