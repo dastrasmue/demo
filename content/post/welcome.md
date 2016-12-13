@@ -1,11 +1,11 @@
 +++
 date = "2016-12-13T13:12:15+01:00"
-title = "welcome"
+title = "Willkommen"
 draft = false
 
 +++
 
-## Herzlich Willkommen zum 1-Minuten Blog mit Hugo!
+## Herzlich Willkommen zum 1-Minuten-Blog mit Hugo!
 
 Ich werde im Rahmen des Web&Wine-Lightning-Talks vorstellen, wie man mit dem *statischen Seitengenerator*
 [HUGO](https://gohugo.io/) einen eigenen Blog erstellen kann. Die ersten Schritte können in einer Minute bewältigt werden.
@@ -69,6 +69,29 @@ $ git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git
 
 Anschließend sollte die Konfigurationsdatei des Themas in das Projekt-Root-Verzeichnis kopiert und angepasst werden.
 
-
 ### Hosting des Blogs auf Github Pages
-### Einbettung von Kommentarenx
+
+Mit Hugo muss vor dem Hosting die HTML-Version der Seite erzeugt werden. Dies
+geschieht über den Befehl `hugo`. Dabei werden aus dem Thema und den Markdown-
+Dateien eine gültige Seitenstruktur erzeugt und unter `public` abgelegt.
+
+Mit dem Dienst [Pages](https://pages.github.com/) bietet Github die Möglichkeit,
+statische Seiten direkt zu hosten. In der Regel wird ein ganzes Repository als
+Internetseite verstanden und kann über die URL `https://username.github.io/repo`
+erreicht werden.
+
+Gibt es in dem Repository jedoch einen Unterordner `docs`, so kann dieser als
+Quellverzeichnis gewählt werden. Damit Hugo die Seite in `docs` ablegt,
+bedarf es einen kleinen Tricks:
+
+```
+$ mkdir docs
+$ ln -s docs public
+$ hugo
+```
+
+Danach geht man in dem Github-Repository auf *Settings > GitHub Pages* und wählt
+*master branch /docs folder* als Quelle aus. Nach dem nächsten Push des Codes ist
+die Seite über <https://username.github.io/repo> erreichbar.
+
+### Einbettung von Kommentaren

@@ -10,12 +10,12 @@
     <atom:link href="https://dastrasmue.github.io/demo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>welcome</title>
-      <link>https://dastrasmue.github.io/demo/2016/12/welcome/</link>
+      <title>Willkommen</title>
+      <link>https://dastrasmue.github.io/demo/2016/12/willkommen/</link>
       <pubDate>Tue, 13 Dec 2016 13:12:15 +0100</pubDate>
       
-      <guid>https://dastrasmue.github.io/demo/2016/12/welcome/</guid>
-      <description>&lt;h2 id=&#34;herzlich-willkommen-zum-1-minuten-blog-mit-hugo&#34;&gt;Herzlich Willkommen zum 1-Minuten Blog mit Hugo!&lt;/h2&gt;
+      <guid>https://dastrasmue.github.io/demo/2016/12/willkommen/</guid>
+      <description>&lt;h2 id=&#34;herzlich-willkommen-zum-1-minuten-blog-mit-hugo&#34;&gt;Herzlich Willkommen zum 1-Minuten-Blog mit Hugo!&lt;/h2&gt;
 
 &lt;p&gt;Ich werde im Rahmen des Web&amp;amp;Wine-Lightning-Talks vorstellen, wie man mit dem &lt;em&gt;statischen Seitengenerator&lt;/em&gt;
 &lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt; einen eigenen Blog erstellen kann. Die ersten Schritte können in einer Minute bewältigt werden.&lt;/p&gt;
@@ -80,7 +80,29 @@ $ git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git
 
 &lt;h3 id=&#34;hosting-des-blogs-auf-github-pages&#34;&gt;Hosting des Blogs auf Github Pages&lt;/h3&gt;
 
-&lt;h3 id=&#34;einbettung-von-kommentarenx&#34;&gt;Einbettung von Kommentarenx&lt;/h3&gt;</description>
+&lt;p&gt;Mit Hugo muss vor dem Hosting die HTML-Version der Seite erzeugt werden. Dies
+geschieht über den Befehl &lt;code&gt;hugo&lt;/code&gt;. Dabei werden aus dem Thema und den Markdown-
+Dateien eine gültige Seitenstruktur erzeugt und unter &lt;code&gt;public&lt;/code&gt; abgelegt.&lt;/p&gt;
+
+&lt;p&gt;Mit dem Dienst &lt;a href=&#34;https://pages.github.com/&#34;&gt;Pages&lt;/a&gt; bietet Github die Möglichkeit,
+statische Seiten direkt zu hosten. In der Regel wird ein ganzes Repository als
+Internetseite verstanden und kann über die URL &lt;code&gt;https://username.github.io/repo&lt;/code&gt;
+erreicht werden.&lt;/p&gt;
+
+&lt;p&gt;Gibt es in dem Repository jedoch einen Unterordner &lt;code&gt;docs&lt;/code&gt;, so kann dieser als
+Quellverzeichnis gewählt werden. Damit Hugo die Seite in &lt;code&gt;docs&lt;/code&gt; ablegt,
+bedarf es einen kleinen Tricks:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir docs
+$ ln -s docs public
+$ hugo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Danach geht man in dem Github-Repository auf &lt;em&gt;Settings &amp;gt; GitHub Pages&lt;/em&gt; und wählt
+&lt;em&gt;master branch /docs folder&lt;/em&gt; als Quelle aus. Nach dem nächsten Push des Codes ist
+die Seite über &lt;a href=&#34;https://username.github.io/repo&#34;&gt;https://username.github.io/repo&lt;/a&gt; erreichbar.&lt;/p&gt;
+
+&lt;h3 id=&#34;einbettung-von-kommentaren&#34;&gt;Einbettung von Kommentaren&lt;/h3&gt;</description>
     </item>
     
     <item>
