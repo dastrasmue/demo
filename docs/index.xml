@@ -214,5 +214,115 @@ lautet &lt;em&gt;minutenblog&lt;/em&gt;.disqus.com.&lt;/p&gt;
 &lt;p&gt;Herzlichen Dank für die Aufmerksamkeit!&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>makandra Gem-Session: Tag 2</title>
+      <link>https://dastrasmue.github.io/minutenblog/2016/11/makandra-gem-session-tag-2/</link>
+      <pubDate>Fri, 18 Nov 2016 07:24:33 +0000</pubDate>
+      
+      <guid>https://dastrasmue.github.io/minutenblog/2016/11/makandra-gem-session-tag-2/</guid>
+      <description>&lt;p&gt;Heute geht es darum, die Suche in der Rails-Anwendung fertig zu machen. Dazu muss ich mich kurz noch in HAML einarbeiten.
+ Der Großteil der Suchlogik sollte passen, nachdem Henning das gestern zusammengeschrieben hat.&lt;/p&gt;
+
+&lt;p&gt;EDIT: Ok, es gab ein paar Tücken mit dem Routing von makandra cards. Da sich Aktionen in der Regel auf Decks beziehen,
+ wurde in die Route automatisch das aktuelle Deck eingefügt. Die Chrome Extension soll jedoch alle Decks, auf die der
+ Benutzer Zugriff hat, durchsuchen nach passenden Cards. Dies konnte aber durch Reservierung des &lt;code&gt;api&lt;/code&gt;-Pfades behoben
+ werden.&lt;/p&gt;
+
+&lt;p&gt;Nun steht das Styling der Suchergebnisse an. Da sich die Ergebnisse in die normale Google-Suche visuell gut eingliedern
+ sollen, habe ich die selben CSS-Werte gesetzt.&lt;/p&gt;
+
+&lt;p&gt;Der letzte Schritt ist, die Logik der Chrome-Extension so anzupassen, dass Ergebnisse automatisch nachgeladen werden,
+ sobald bei Google etwas anderes eingetippt wird. Dabei kann wohl ausgenutzt werden, dass sich die URL bei jeder Suche
+ anpasst. Man muss also das Event, dass sich die URL ändert, abfangen. Ich habe mich dabei an einem Beispiel auf
+ Stackoverflow gehalten, leider hat das nicht auf Anhieb so funktioniert, so dass ich bis zu unserer Deadline um 15:30
+ das letzte Feature nicht umsetzen konnte.&lt;/p&gt;
+
+&lt;p&gt;Trotzdem halte ich die Chrome Extension für ganz nützlich und möchte das Projekt noch in meiner Freizeit abschließen.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>makandra Gem-Session: Tag 1</title>
+      <link>https://dastrasmue.github.io/minutenblog/2016/11/makandra-gem-session-tag-1/</link>
+      <pubDate>Thu, 17 Nov 2016 10:45:23 +0000</pubDate>
+      
+      <guid>https://dastrasmue.github.io/minutenblog/2016/11/makandra-gem-session-tag-1/</guid>
+      <description>&lt;h2 id=&#34;aufgaben&#34;&gt;Aufgaben&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Erstellen der Projekt-Seite mit Hugo
+
+&lt;ul&gt;
+&lt;li&gt;Hosting auf Raspberry Pi per Docker&lt;/li&gt;
+&lt;li&gt;Domain-Weiterleitung einrichten&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Einarbeitung Chrome Extensions&lt;/li&gt;
+&lt;li&gt;Einarbeitung Webapp-Suche anzapfen&lt;/li&gt;
+&lt;li&gt;Auswahl eines passenden Namens&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;einarbeitung-chrome-extensions&#34;&gt;Einarbeitung Chrome Extensions:&lt;/h2&gt;
+
+&lt;p&gt;Eine Chrome Extension ist ein gepackter Ordner, der ein Manifest, HTML- und JavaScript-Dateien enthält. Für die Entwicklung kann ein lokales Verzeichnis verwendet werden. Dieses wird in Chrome eingebunden, indem chrome://extensions aufgerufen wird. Einfach den Ordner per Drag-and-Drop reinziehen. Done.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; Ich muss eine &lt;em&gt;page action&lt;/em&gt; erstellen, da sich die Extension nur auf eine Seite bezieht (in diesem Fall google.de).&lt;/p&gt;
+
+&lt;h3 id=&#34;architektur&#34;&gt;Architektur&lt;/h3&gt;
+
+&lt;p&gt;Chrome Extensions bestehen aus mehreren Teilen. Dabei gibt es verschiedene Arten von HTML-Seiten. Die &lt;em&gt;background page&lt;/em&gt; &lt;code&gt;background.html&lt;/code&gt; kontrolliert das Verhalten der Extension im Hintergrund. Wenn die Hintergrundseite ständig geöffnet sein soll, so muss sie eine &lt;em&gt;persistent background page&lt;/em&gt; sein. Andernfalls recht eine &lt;em&gt;event page&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; Ich benötige wahrscheinlich eine &lt;em&gt;event page&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;UI Pages&lt;/em&gt; sind HTML-Seiten, die z.B. in einem Popup angezeigt werden. Typisch sind beispielweise Einstellungsseiten. HTML-Seiten innerhalb einer Extension können uneingeschränkt aufeinander zugreifen.&lt;/p&gt;
+
+&lt;p&gt;Für die Interaktion mit einer Webseite muss ein &lt;em&gt;content script&lt;/em&gt; erzeugt werden. Dies ist eine JavaScript-Datei, die Details der besuchten Seiten auslesen und ändern kann. Content scripts können allerdings nicht das DOM der background page ändern.&lt;/p&gt;
+
+&lt;p&gt;-&amp;gt; Ich brauch auf jeden Fall ein &lt;em&gt;content script&lt;/em&gt; zum Einbetten der Ergebnisse in die Goolge-Suchergebnisse.&lt;/p&gt;
+
+&lt;h3 id=&#34;status-20-30&#34;&gt;Status 20:30&lt;/h3&gt;
+
+&lt;p&gt;Die Browser Extension ist angelegt und ich hab inzwischen die Funktionsweise verstanden, so dass ich eine &lt;em&gt;page action&lt;/em&gt;
+ erstellen konnte, damit die Extension nur auf Google ausgeführt werden kann. Auf anderen Seiten ist die Schaltfläche ausgegraut.
+ Das &lt;em&gt;content script&lt;/em&gt; kann nach Klick auf das Extension-Logo per JavaScript die Google-Suchanfrage ganz einfach auslesen. Weiter
+ wird per JavaScript ein &lt;code&gt;div&lt;/code&gt; konstruiert, welches in der rechten Seitenleiste eingebettet wird.&lt;/p&gt;
+
+&lt;p&gt;Jetzt muss ich schauen, wie ich eine Suchanfrage an makandra cards schicken kann, so dass ich eine JSON mit Suchergebnissen zurückgeliefert bekomme.
+Ach ja, Abendessen gab&amp;rsquo;s auch schon und war sehr lecker&amp;hellip; ;-)&lt;/p&gt;
+
+&lt;h3 id=&#34;status-22-00&#34;&gt;Status 22:00&lt;/h3&gt;
+
+&lt;p&gt;Henning hat sich mit mir zusammengesetzt, um den Endpoint zu besprechen, der von der Rails-Anwendung angeboten werden soll. Wir haben uns dafür entschieden, einen neuen Controller zu schreiben, der eine minimale HTML-Seite zurückliefert, die die Suchergebnisse enthält. Diese Seite kann von der Chrome Extension in einem iframe eingebettet werden.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>makandra Gem-Session 2016</title>
+      <link>https://dastrasmue.github.io/minutenblog/2016/11/makandra-gem-session-2016/</link>
+      <pubDate>Thu, 17 Nov 2016 10:12:47 +0000</pubDate>
+      
+      <guid>https://dastrasmue.github.io/minutenblog/2016/11/makandra-gem-session-2016/</guid>
+      <description>&lt;h2 id=&#34;ziel&#34;&gt;Ziel&lt;/h2&gt;
+
+&lt;p&gt;Entwicklung eines Browser-Plugins, das bei einer Google-Suche gleichzeitig passende Ergebnisse aus der makandra Wissensdatenbank anzeigt.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;anforderungen&#34;&gt;Anforderungen&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Extension für Chrome&lt;/li&gt;
+&lt;li&gt;Einbettung in Google-Suchergebnisse&lt;/li&gt;
+&lt;li&gt;Durchsuchen privater Cards&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;nice-to-haves&#34;&gt;&amp;ldquo;Nice-to-haves&amp;rdquo;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Firefox-Addon&lt;/li&gt;
+&lt;li&gt;Web-Clipper-Funktion&lt;/li&gt;
+&lt;li&gt;Context-Menu-Eintrag für Suche nach markiertem Ausdruck (siehe Beispiel &amp;ldquo;Download and Open Button&amp;rdquo;)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
   </channel>
 </rss>
