@@ -91,6 +91,12 @@ defaultContentLanguage = "de-de"
   name = "RSS"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
   url = "/index.xml"
+[[menu.misc]]
+  weight = 1
+  identifier = "legal"
+  name = "Impressum"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-legal\"></i>"
+  url = "/impressum"
 
 [params]
   # Customize date format use to render blog post date, categories and other
